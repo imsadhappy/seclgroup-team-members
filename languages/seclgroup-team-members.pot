@@ -127,3 +127,6 @@ msgstr ""
 
 msgid "Reviewed posts:"
 msgstr ""
+
+msgid "plugin requires ACF plugin to work properly"
+msgstr ""

@@ -7,5 +7,9 @@ Dependencies: ACF
 
 ## Changelog
 
+### 1.0.1
+- Testing updater
+- No ACF admin warning
+
 ### 1.0.0
 - Initial version

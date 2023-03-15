@@ -28,7 +28,7 @@ class Team_Members {
 
 		self::$file = $file;
         self::$plugin = get_file_data( $file, array(
-			'Name' => 'Name',
+			'Plugin Name' => 'Plugin Name',
 			'Author' => 'Author',
 			'Version' => 'Version',
 			'Author URI' => 'Author URI',
@@ -43,6 +43,7 @@ class Team_Members {
 
 		add_action( 'init', array( $this, 'hooks' ), 99 );
 		add_action( 'team_member_template', array( $this, 'team_member_template' ) );
+		add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 	}
 
 	public function hooks () {
@@ -50,10 +51,21 @@ class Team_Members {
 		unload_textdomain( $this->i18n );
 		load_plugin_textdomain( $this->i18n, false, basename( dirname( self::$file ) ) . '/languages' );
 
+		if ( ! class_exists('ACF') )
+			return;
+
 		require_once( $this->dir . 'includes/post-types.php' );
         register_block_type( $this->dir . 'blocks/team-member-details' );
         register_block_type( $this->dir . 'blocks/team-members-list' );
     	require_once( $this->dir . 'includes/acf-fields.php' );
+	}
+
+	public function admin_notices () {
+
+		if ( ! class_exists('ACF') )
+			printf( '<div class="notice notice-error"><p>"%s" %s</p></div>',
+					esc_html__(self::$plugin['Plugin Name'], $this->i18n),
+					esc_html__('plugin requires ACF plugin to work properly', $this->i18n) );
 	}
 
 	public function team_member_template ( $args = array() ) {

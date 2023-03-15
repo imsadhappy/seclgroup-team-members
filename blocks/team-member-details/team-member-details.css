@@ -1,0 +1,55 @@
+.team-member-image img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
+    clip-path: circle();
+}
+
+.team-member-reviewed-post,
+.team-member-position,
+.team-member-email,
+.team-member-phone {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.team-member-position,
+.team-member-email,
+.team-member-phone {
+    display: block;
+    text-align: center;
+}
+
+.team-member-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.team-member-email:before,
+.team-member-phone:before {
+    font-family: dashicons;
+    position: absolute;
+    transform: translate(-120%, 1px);
+}
+
+.team-member-phone:before {
+    content: "\f525";
+}
+
+.team-member-email:before {
+    content: "\f465";
+}
+
+.team-member-reviewed-post {
+    margin: 0 0 10px 10px;
+}
+
+.team-member-reviewed-post:after {
+    content: ','
+}
+
+.team-member-reviewed-post:last-child:after {
+    content: '.'
+}

@@ -1,0 +1,14 @@
+{
+    "name": "acf/team-member-details",
+    "title": "Team Member Details",
+    "description": "A custom team member details block.",
+    "style": [ "file:./team-member-details.css" ],
+    "category": "formatting",
+    "icon": "admin-users",
+    "keywords": ["team", "member", "details"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "team-member-details.php"
+    },
+    "align": "full"
+}

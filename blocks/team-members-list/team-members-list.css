@@ -1,0 +1,31 @@
+.team-members-list-block {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.team-members-list-block-columns--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.team-members-list-block-columns--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.team-members-list-block-columns--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+    .team-members-list-block-columns--3,
+    .team-members-list-block-columns--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-members-list-block-columns--2,
+    .team-members-list-block-columns--3,
+    .team-members-list-block-columns--4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

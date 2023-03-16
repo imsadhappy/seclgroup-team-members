@@ -7,6 +7,9 @@ Dependencies: ACF
 
 ## Changelog
 
+### 1.0.4
+- Added ru_RU translation
+
 ### 1.0.3
 - Testing updater
 

@@ -1,0 +1,138 @@
+# Copyright (C) 2018-2022 SECLGroup <info@seclgroup.com>.
+# This file is distributed under the same license as the Team Members with ACF plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Team Members with ACF 1.0.0\n"
+"POT-Creation-Date: 2023-03-15 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.4.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
+
+msgid "Team Members with ACF"
+msgstr "Пост тип \"Команда\" ACF"
+
+msgid "Gutenberg blocks for custom post type - Team Members"
+msgstr "Блоки Gutenberg для пост типа - Команда"
+
+msgid "Please select team member to output"
+msgstr "Выберите члена команды"
+
+msgid "Please select team members to output"
+msgstr "Выберите членов команды"
+
+msgid "Team Member"
+msgstr "Член команды"
+
+msgid "Team Members"
+msgstr "Команда"
+
+msgid "Team Member Description"
+msgstr "Описание члена команды"
+
+msgid "Item Archives"
+msgstr ""
+
+msgid "Item Attributes"
+msgstr ""
+
+msgid "Parent Item:"
+msgstr ""
+
+msgid "All Items"
+msgstr ""
+
+msgid "Add New Item"
+msgstr ""
+
+msgid "Add New"
+msgstr ""
+
+msgid "New Item"
+msgstr ""
+
+msgid "Edit Item"
+msgstr ""
+
+msgid "Update Item"
+msgstr ""
+
+msgid "View Item"
+msgstr ""
+
+msgid "View Items"
+msgstr ""
+
+msgid "Search Item"
+msgstr ""
+
+msgid "Not found"
+msgstr ""
+
+msgid "Not found in Trash"
+msgstr ""
+
+msgid "Featured Image"
+msgstr ""
+
+msgid "Set featured image"
+msgstr ""
+
+msgid "Remove featured image"
+msgstr ""
+
+msgid "Use as featured image"
+msgstr ""
+
+msgid "Insert into item"
+msgstr ""
+
+msgid "Uploaded to this item"
+msgstr ""
+
+msgid "Items list"
+msgstr ""
+
+msgid "Items list navigation"
+msgstr ""
+
+msgid "Filter items list"
+msgstr ""
+
+msgid "Reviewer"
+msgstr "Обзор"
+
+msgid "Team Member Details"
+msgstr "Описание члена команды"
+
+msgid "Position"
+msgstr "Роль"
+
+msgid "Email"
+msgstr ""
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Image"
+msgstr "Изображение"
+
+msgid "Team Members List"
+msgstr "Список членов команды"
+
+msgid "Columns"
+msgstr "Колонки"
+
+msgid "Display Positions?"
+msgstr "Показывать роль?"
+
+msgid "Reviewed posts:"
+msgstr "Посты на обзоре:"
+
+msgid "plugin requires ACF plugin to work properly"
+msgstr "(плагин) не будет работать без ACF"

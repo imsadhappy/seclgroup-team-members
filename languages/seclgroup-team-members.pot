@@ -1,0 +1,132 @@
+# Copyright (C) 2018-2022 SECLGroup <info@seclgroup.com>.
+# This file is distributed under the same license as the Team Members with ACF plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Team Members with ACF 1.0.0\n"
+"POT-Creation-Date: 2023-03-15 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Team Members with ACF"
+msgstr ""
+
+msgid "Gutenberg blocks for custom post type - Team Members"
+msgstr ""
+
+msgid "Please select team member to output"
+msgstr ""
+
+msgid "Please select team members to output"
+msgstr ""
+
+msgid "Team Member"
+msgstr ""
+
+msgid "Team Members"
+msgstr ""
+
+msgid "Team Member Description"
+msgstr ""
+
+msgid "Item Archives"
+msgstr ""
+
+msgid "Item Attributes"
+msgstr ""
+
+msgid "Parent Item:"
+msgstr ""
+
+msgid "All Items"
+msgstr ""
+
+msgid "Add New Item"
+msgstr ""
+
+msgid "Add New"
+msgstr ""
+
+msgid "New Item"
+msgstr ""
+
+msgid "Edit Item"
+msgstr ""
+
+msgid "Update Item"
+msgstr ""
+
+msgid "View Item"
+msgstr ""
+
+msgid "View Items"
+msgstr ""
+
+msgid "Search Item"
+msgstr ""
+
+msgid "Not found"
+msgstr ""
+
+msgid "Not found in Trash"
+msgstr ""
+
+msgid "Featured Image"
+msgstr ""
+
+msgid "Set featured image"
+msgstr ""
+
+msgid "Remove featured image"
+msgstr ""
+
+msgid "Use as featured image"
+msgstr ""
+
+msgid "Insert into item"
+msgstr ""
+
+msgid "Uploaded to this item"
+msgstr ""
+
+msgid "Items list"
+msgstr ""
+
+msgid "Items list navigation"
+msgstr ""
+
+msgid "Filter items list"
+msgstr ""
+
+msgid "Reviewer"
+msgstr ""
+
+msgid "Team Member Details"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Team Members List"
+msgstr ""
+
+msgid "Columns"
+msgstr ""
+
+msgid "Display Positions?"
+msgstr ""
+
+msgid "Reviewed posts:"
+msgstr ""
+
+msgid "plugin requires ACF plugin to work properly"
+msgstr ""

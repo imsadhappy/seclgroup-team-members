@@ -1,0 +1,14 @@
+{
+    "name": "acf/team-members-list",
+    "title": "Team Members List",
+    "description": "A custom team members list block.",
+    "editorStyle": "file:./../../assets/team-members.css",
+    "category": "formatting",
+    "icon": "admin-users",
+    "keywords": ["team", "members", "list"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "team-members-list.php"
+    },
+    "align": "full"
+}

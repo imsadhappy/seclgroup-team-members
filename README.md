@@ -7,6 +7,12 @@ Dependencies: ACF
 
 ## Changelog
 
+### 1.1.0
+- Added abstraction
+- Testing updater
+- refactoring
+- fixed hooks
+
 ### 1.0.6
 - refactoring
 

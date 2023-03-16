@@ -4,7 +4,7 @@
  * Description: Gutenberg blocks for custom post type - Team Members
  * Plugin URI: https://api.github.com/repos/imsadhappy/seclgroup-team-members/releases
  * Author: SECL Group
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author URI: https://seclgroup.com
  * Text Domain: seclgroup-team-members
  * Domain Path: /languages

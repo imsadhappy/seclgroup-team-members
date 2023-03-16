@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Team_Members extends Plugin_Factory {
 
-	protected static function hooks ( $instance ) {
+	protected function hooks () {
 
-		add_action( 'init', array( $instance, 'init' ), 99 );
-		add_action( 'team_member_template', array( $instance, 'team_member_template' ) );
+		add_action( 'init', array( $this, 'init' ), 99 );
+		add_action( 'team_member_template', array( $this, 'team_member_template' ) );
 	}
 
 	public function init () {

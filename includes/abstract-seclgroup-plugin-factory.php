@@ -10,7 +10,7 @@ abstract class Plugin_Factory {
 
     use Plugin_Loader;
 
-    protected static function hooks( $instance ) {}
+    protected function hooks() {}
 
 	public function __construct ( $file ) {
 
@@ -18,7 +18,8 @@ abstract class Plugin_Factory {
 		register_deactivation_hook( $file, array( get_called_class(), '__deactivate' ) );
 
 		self::load( $file );
-		self::hooks( $this );
+
+		$this->hooks();
 	}
 
 	public static function __activate () {

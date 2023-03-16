@@ -7,6 +7,9 @@ Dependencies: ACF
 
 ## Changelog
 
+### 1.0.3
+- Testing updater
+
 ### 1.0.2
 - Fixed updater
 - refactoring

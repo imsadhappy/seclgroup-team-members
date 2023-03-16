@@ -6,16 +6,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-final class Updater {
+final class Plugin_Updater {
 
-    private static $plugin = null;
+    use Plugin_Loader;
 
-    public function __construct ( $plugin ) {
+    public function __construct ( $file ) {
 
-        if ( ! is_null( self::$plugin ) )
-            return _doing_it_wrong( __FUNCTION__, __( 'Instance of '.__CLASS__.' already exists. Constructing new instances of this class is forbidden.' ), '1.0' );
-
-        self::$plugin = $plugin;
+        self::load( $file );
 
         add_filter( 'upgrader_pre_download', array( $this, 'pre_download' ) );
         add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );

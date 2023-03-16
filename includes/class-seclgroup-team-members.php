@@ -6,44 +6,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-class Team_Members {
+class Team_Members extends Plugin_Factory {
 
-	private static $plugin = null;
+	protected static function hooks ( $instance ) {
 
-	private static function load ( $file ) {
-
-        self::$plugin = get_file_data( $file, array(
-			'Plugin Name' => 'Plugin Name',
-			'Author' => 'Author',
-			'Version' => 'Version',
-			'Author URI' => 'Author URI',
-			'Plugin URI' => 'Plugin URI',
-			'Description' => 'Description',
-			'Text Domain' => 'Text Domain',
-			'Domain Path' => 'Domain Path'
-		), 'plugin' );
-
-		self::$plugin['file'] = $file;
-		self::$plugin['basename'] = plugin_basename( $file );
-		self::$plugin['slug'] = current( explode('/', self::$plugin['basename']) );
-        self::$plugin['url'] = plugin_dir_url( $file );
-		self::$plugin['dir'] = plugin_dir_path( $file );
-	}
-
-	public function __construct ( $file ) {
-
-        if ( ! is_null( self::$plugin ) )
-            return _doing_it_wrong( __FUNCTION__, __( 'Instance of '.__CLASS__.' already exists. Constructing new instances of this class is forbidden.' ), '1.0' );
-
-		self::load( $file );
-
-		if ( ! class_exists( 'SECLGroup\Updater' ) )
-			require_once( self::$plugin['dir'] . 'includes/class-seclgroup-updater.php' );
-
-		new Updater( self::$plugin );
-
-		add_action( 'init', array( $this, 'init' ), 99 );
-		add_action( 'team_member_template', array( $this, 'team_member_template' ) );
+		add_action( 'init', array( $instance, 'init' ), 99 );
+		add_action( 'team_member_template', array( $instance, 'team_member_template' ) );
 	}
 
 	public function init () {
@@ -69,8 +37,10 @@ class Team_Members {
 		if ( ! post_type_exists('team_members') )
 			require_once( self::$plugin['dir'] . 'includes/team-members-post-type.php' );
 
-		register_block_type( self::$plugin['dir'] . 'blocks/team-member-details' );
-        register_block_type( self::$plugin['dir'] . 'blocks/team-members-list' );
+		if ( function_exists('register_block_type') ) {
+			register_block_type( self::$plugin['dir'] . 'blocks/team-member-details' );
+        	register_block_type( self::$plugin['dir'] . 'blocks/team-members-list' );
+		}
 
 		if ( function_exists('acf_add_local_field_group') )
     		require_once( self::$plugin['dir'] . 'includes/team-members-acf-fields.php' );
@@ -90,39 +60,4 @@ class Team_Members {
 
 		include( $template_path );
 	}
-
-	/**
-	 * @return void
-	 */
-	public static function __activate () {
-
-        if ( ! self::check_admin_referer('activate') )
-            return;
-
-		add_action( 'wp_loaded', 'flush_rewrite_rules', 99 );
-	}
-
-	/**
-	 * @return void
-	 */
-	public static function __deactivate () {
-
-        if ( ! self::check_admin_referer('deactivate') )
-            return;
-
-		add_action( 'wp_loaded', 'flush_rewrite_rules', 99 );
-	}
-
-    /**
-     * @return bool
-     */
-    private static function check_admin_referer ( $action ) {
-
-		if ( ! current_user_can( 'activate_plugins' ) )
-			return false;
-
-        $plugin = isset( $_REQUEST['plugin'] ) ? $_REQUEST['plugin'] : '';
-
-        return check_admin_referer( "{$action}-plugin_{$plugin}" );
-    }
 }
